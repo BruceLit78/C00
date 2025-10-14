@@ -1,8 +1,8 @@
-void ipssi_putchar(char c);
+void ipssi_print_comb2(void);
 
 
 int main()
 {
-	ipssi_putchar('L');
-	return 1;
-	 }
+	ipssi_print_comb2();
+	return 0;
+}
