@@ -1,4 +1,4 @@
-void ipssi_print_comb2(void);
+void (void);
 
 
 int main()

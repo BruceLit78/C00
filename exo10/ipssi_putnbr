@@ -1,0 +1,23 @@
+#include <unistd.h>
+
+void	ipssi_putnbr(int nb)
+{
+	char	digit_char;
+
+	if (nb == -2147483648)
+	{
+		write(1, "-2147483648", 11);
+		return ;
+	}
+	if (nb < 0)
+	{
+		write(1, "-", 1);
+		nb = -nb;
+	}
+	if (nb >= 10)
+	{
+		ipssi_putnbr(nb / 10);
+	}
+	digit_char = (nb % 10) + '0';
+	write(1, &digit_char, 1);
+}
